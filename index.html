@@ -11,15 +11,15 @@
 
   <style>
     :root{
-      /* Soft, light palette */
-      --bg: #f7f7fb;
-      --panel: #ffffff;
-      --text: #1a1a1a;
-      --muted: #6b7280;
-      --border: #e7e7ef;
-      --accent: #6ea8fe;          /* soft blue */
-      --accent-ghost: #e9f1ff;    /* very light blue */
-      --shadow: 0 10px 30px rgba(0,0,0,0.06);
+      /* Soft beige & white palette */
+      --bg: #fdfbf7;         /* light beige background */
+      --panel: #ffffff;      /* white panels */
+      --text: #2d2d2d;       /* dark gray text */
+      --muted: #7a7a7a;      /* muted text */
+      --border: #e9e4dd;     /* beige-tinted border */
+      --accent: #d4a373;     /* warm beige accent */
+      --accent-ghost: #f9f4ef;
+      --shadow: 0 8px 20px rgba(0,0,0,0.05);
       --radius: 16px;
       --maxw: 860px;
     }
@@ -30,14 +30,14 @@
       margin: 0;
       font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: var(--text);
-      background: radial-gradient(1200px 600px at 20% -10%, #ffffff 0%, var(--bg) 65%);
+      background: var(--bg);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
     a{ color: var(--text); text-decoration: none; }
-    a:hover{ color: #2f4cff; }
+    a:hover{ color: var(--accent); }
 
     .wrap{
       max-width: var(--maxw);
@@ -64,7 +64,7 @@
       object-fit: cover;
       width: 100%;
       border: 1px solid var(--border);
-      background: #f2f4f8;
+      background: #f5f2ec;
     }
     .avatar{
       width: 100px; height: 100px; border-radius: 50%;
@@ -72,7 +72,7 @@
       border: 4px solid #fff;
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       margin-top: -50px;
-      background: #f2f4f8;
+      background: #f0ede8;
     }
     .title{
       display: flex; flex-direction: column; gap: 6px;
@@ -116,12 +116,12 @@
     .skills li{
       padding: 8px 12px;
       background: var(--accent-ghost);
-      border: 1px solid #d7e6ff;
+      border: 1px solid var(--border);
       border-radius: 999px;
       font-size: 0.95rem;
     }
 
-    /* Projects: simple two-column on wide screens */
+    /* Projects */
     .projects{
       display: grid; gap: 12px;
     }
@@ -129,7 +129,7 @@
       padding: 16px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      background: #fcfdff;
+      background: #fffdf9;
     }
     .project h3{
       margin: 0 0 6px 0; font-size: 1.05rem;
@@ -148,7 +148,7 @@
       background: #ffffff;
     }
     .contact a:hover{
-      background: #f6f8ff; border-color: #cfd8ff;
+      background: #f9f4ef; border-color: #e3d9cc;
     }
 
     footer{
@@ -164,7 +164,6 @@
   <div class="wrap">
     <!-- HERO -->
     <header>
-      <!-- Optional cover (keeps layout soft). Replace src or remove <img> if not using -->
       <img class="cover" src="18cf7c9397cb82796568162ee1aa8262.jpg" alt="">
       <img class="avatar" src="IMG_1866.JPG" alt="Emirhan Koç">
       <div class="title">
@@ -229,7 +228,7 @@
   <footer>© 2024 Emirhan Koç</footer>
 
   <script>
-    // Minimal, gentle fade-in on scroll
+    // Fade-in effect
     const reveal = (entries, obs) => {
       for (const e of entries) {
         if (e.isIntersecting) {
