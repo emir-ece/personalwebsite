@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     'Microcontrollers',
   ],
   authors: [{ name: 'Emir Koç' }],
-  creator: 'Emir Koç'}
+  creator: 'Emir Koç',
   openGraph: {
     title: 'Emir Koç - Portfolio',
     description:
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Emir Koç - Software Developer',
     description:
-      'Passionate software developer crafting scalable and efficient architectures. Explore my projects and technical expertise.', // <-- comma added here
+      'Passionate software developer crafting scalable and efficient architectures. Explore my projects and technical expertise.',
     creator: 'Emir Koç',
     images: ['/og-image.jpg'],
   },
@@ -87,4 +87,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 
