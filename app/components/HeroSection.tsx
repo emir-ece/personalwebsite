@@ -23,10 +23,10 @@ export default function HeroSection() {
 						<div className="w-3 h-3 rounded-full bg-green-500" />
 					</div>
 					<div className="font-mono">
-						<p className="text-green-500">$ whoami</p>
-						<h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">Alex Chen</h1>
-						<p className="text-gray-400 mb-2">Senior Backend Engineer</p>
-						<p className="text-green-500">$ skills</p>
+						<p className="text-green-500">int main() {</p>
+						<h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">emir koç</h1>
+						<p className="text-gray-400 mb-2">ambitious software engineer</p>
+						<p className="text-green-500">skills</p>
 						<div className="flex flex-wrap gap-2 mt-2">
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Node.js</span>
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Python</span>
@@ -34,6 +34,7 @@ export default function HeroSection() {
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">AWS</span>
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Docker</span>
 							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Kubernetes</span>
+						<p className="text-green-500">}</p>
 						</div>
 					</div>
 				</motion.div>
@@ -41,3 +42,4 @@ export default function HeroSection() {
 		</section>
 	);
 }
+
