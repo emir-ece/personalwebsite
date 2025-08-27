@@ -20,9 +20,9 @@ export default function ContactSection() {
 							<div className="w-3 h-3 rounded-full bg-green-500" />
 						</div>
 						<div className="font-mono">
-							<p className="text-green-500 mb-2">$ contact --info</p>
-							<h2 className="text-3xl font-bold mb-8 text-gray-200">Let&apos;s Connect</h2>
-							<p className="text-green-500 mb-2">$ location --current</p>
+							<p className="text-green-500 mb-2">struct ContactInfo</p>
+							<h2 className="text-3xl font-bold mb-8 text-gray-200">let&apos;s connect</h2>
+							<p className="text-green-500 mb-2">struct Location</p>
 							<div className="flex items-center gap-2 text-gray-300">
 								<svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path
@@ -33,19 +33,19 @@ export default function ContactSection() {
 									/>
 									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 								</svg>
-								<span>San Francisco, CA</span>
+								<span>springfield, ma</span>
 							</div>
-							<p className="text-green-500 mt-8 mb-2">$ contact --email</p>
+							<p className="text-green-500 mt-8 mb-2">struct Email</p>
 							<motion.a
-								href="mailto:alex.chen@example.com"
+								href="mailto:ekoc@umass.edu"
 								whileHover={{ scale: 1.02 }}
 								className="inline-block px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors"
 							>
-								alex.chen@example.com
+								ekoc@umass.edu
 							</motion.a>
-							<p className="text-green-500 mt-8 mb-2">$ cat resume.pdf</p>
+							<p className="text-green-500 mt-8 mb-2">struct Resume</p>
 							<motion.a
-								href="/path-to-resume.pdf"
+								href="/path-to-resume.pdf" *************
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
@@ -54,9 +54,9 @@ export default function ContactSection() {
 								<svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
 									<path d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" />
 								</svg>
-								<span>Download Resume</span>
+								<span>download resume</span>
 							</motion.a>
-							<p className="text-green-500 mt-8 mb-4">$ ls ./social-links</p>
+							<p className="text-green-500 mt-8 mb-4">struct SocialLinks</p>
 							<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 								<motion.a
 									href="#"
@@ -111,3 +111,4 @@ export default function ContactSection() {
 		</section>
 	);
 }
+
