@@ -1,0 +1,214 @@
+/* Palette & base tokens */
+:root{
+  --bg: #f7f3ea;         /* light beige background */
+  --panel: #ffffff;      /* white cards/panels */
+  --text: #1f2937;       /* slate-800 */
+  --muted: #6b7280;      /* slate-500/600 */
+  --border: #eae2d6;     /* beige-tinted border */
+  --accent: #c99b64;     /* warm sand accent */
+  --shadow: 0 10px 28px rgba(17, 24, 39, 0.06);
+  --radius: 14px;
+  --maxw: 880px;
+}
+
+/* Global reset-ish */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  background: radial-gradient(1200px 700px at 12% -10%, #fff 0%, var(--bg) 70%);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Generic links */
+a{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+}
+a:hover{
+  color: var(--accent);
+  border-color: #eadfce;
+}
+
+/* ---------- Header ---------- */
+header{
+  background-color: transparent; /* container look handled by inner panels */
+  padding: 0; margin: 0;
+}
+
+/* Top wide cover image */
+header > img{
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid var(--border);
+  filter: saturate(105%);
+}
+
+/* Card-like masthead that overlaps the cover */
+.masthead{
+  max-width: var(--maxw);
+  margin: -60px auto 0;                 /* overlap */
+  padding: 22px 22px 18px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Circular avatar */
+.masthead img{
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  background: #f3eee6;
+}
+
+/* Name + subtitle */
+.masthead h1{
+  margin: 6px 0 4px;
+  font-size: 2rem;
+  letter-spacing: .2px;
+}
+.masthead p{
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---------- Sections ---------- */
+section{
+  max-width: var(--maxw);
+  margin: 22px auto;
+  padding: 22px;
+  background-color: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+section:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(17,24,39,0.08);
+}
+
+h2{
+  margin: 0 0 14px 0;
+  font-size: 1.25rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* About text */
+#about p{ margin: 0; }
+
+/* ---------- Skills as soft pills ---------- */
+#skills ul{
+  list-style: none;
+  margin: 8px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#skills li{
+  padding: 8px 12px;
+  background: #fff9f2;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* ---------- Projects table → nicer carded table ---------- */
+table{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+thead th{
+  background: #f9f5ee;
+  color: #374151;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  padding: 12px 14px;
+}
+tbody td{
+  padding: 12px 14px;
+  border-top: 1px solid var(--border);
+  vertical-align: top;
+}
+tbody tr:nth-child(even) td{
+  background: #fffdf9;
+}
+tbody tr:hover td{
+  background: #fff7ec;
+}
+
+/* ---------- Contact ---------- */
+#contact a{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  margin-right: 8px;
+}
+#contact a:hover{
+  background: #fff7ec;
+  border-color: #e3d9cc;
+}
+
+/* ---------- Footer ---------- */
+footer{
+  max-width: var(--maxw);
+  margin: 24px auto 60px;
+  padding: 16px 20px;
+  color: var(--muted);
+  text-align: center;
+  background: transparent;
+}
+
+/* ---------- Nice small details ---------- */
+/* Gentle fade-in on load for sections */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+section { animation: fadeUp .45s ease both; }
+section:nth-of-type(2){ animation-delay: .03s; }
+section:nth-of-type(3){ animation-delay: .06s; }
+section:nth-of-type(4){ animation-delay: .09s; }
+
+/* Responsive tweaks */
+@media (max-width: 720px){
+  .masthead{
+    grid-template-columns: 80px 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+  .masthead img{
+    width: 80px; height: 80px;
+  }
+  .masthead h1{ font-size: 1.6rem; }
+  section{ padding: 18px; }
+  thead th, tbody td{ padding: 10px 12px; }
+}
