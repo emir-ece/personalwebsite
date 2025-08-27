@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     'Microcontrollers',
   ],
   authors: [{ name: 'Emir Koç' }],
-  creator: 'Emir Koç',
+  creator: 'Emir Koç'}
   openGraph: {
     title: 'Emir Koç - Portfolio',
     description:
@@ -87,3 +87,4 @@ export default function RootLayout({
     </html>
   );
 }
+
