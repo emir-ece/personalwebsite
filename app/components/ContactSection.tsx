@@ -45,7 +45,7 @@ export default function ContactSection() {
 							</motion.a>
 							<p className="text-green-500 mt-8 mb-2">struct Resume</p>
 							<motion.a
-								href="/Users/emirh/Downloads/Koc,%20Emir%20-%20Resume!.pdf"
+								href="public/resume.pdf"
 								target="_blank"
 								rel="noopener noreferrer"
 								whileHover={{ scale: 1.02 }}
@@ -85,7 +85,7 @@ export default function ContactSection() {
 									</div>
 									<div>
 										<p className="font-semibold text-gray-200">LinkedIn</p>
-										<p className="text-sm text-gray-400">Alex Chen</p>
+										<p className="text-sm text-gray-400">Emir Koc</p>
 									</div>
 								</motion.a>
 								<motion.a
@@ -111,5 +111,6 @@ export default function ContactSection() {
 		</section>
 	);
 }
+
 
 
